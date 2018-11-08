@@ -1,0 +1,87 @@
+/**
+ * partials/reset
+ * ---
+ * Reset file
+ * NOTE: also `normalize.css` is used
+ */
+
+
+// Global box-sizing
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  // `font-size` for REM use
+  font-size: 62.5%;
+  // Cancel hightlight color when tapping in iOS
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  background-color: $body-bg;
+}
+
+img {
+  // Don't allow <IMG> to be larger then its container
+  max-width: 100%;
+  // Omit space caused by default style, between images lines
+  vertical-align: middle;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {}
+}
+
+input[type="text"],
+input[type="search"] {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// Text selection
+::selection {
+  background-color: $selection-bg;
+  color: $body-bg;
+  text-shadow: none;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: normal;
+}
+
+.gform_ajax_spinner {
+  margin-left: 20px;        /* give it some space from the Submit button */
+  border: 4px solid rgba(255, 255, 255, 0.3); /* match with border-left */
+  border-left: 4px solid blue;
+  animation: spinner 1.1s infinite linear;
+  border-radius: 50%;
+  width: 30px;          /* match with height for a circle */
+  height: 30px;
+  margin: 4rem auto 0 auto;
+  display: block;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

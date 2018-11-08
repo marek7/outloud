@@ -1,0 +1,16 @@
+{
+	"extends": "wordpress",
+    "globals": {
+        "jQuery": false,
+        "$": false
+    },
+    "env": {
+      "browser": true
+    },
+    "rules": {
+        "linebreak-style": 0
+    },
+    "parserOptions": {
+        "ecmaVersion": 6
+    }
+}

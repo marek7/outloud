@@ -1,0 +1,19 @@
+.DS_Store
+node_modules
+src/bower_components
+src/css/maps
+.idea
+src/modules/is-debug.php
+
+# ignore gulp generated files
+src/style.css
+src/css/style.css*
+src/js/lib/jquery.js
+src/css/lib/normalize.css
+src/js/lib/modernizr.js
+
+# ignore config files
+ftp.config.json
+
+# ignore build path
+dist/
