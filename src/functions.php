@@ -167,6 +167,9 @@ function html5blank_styles() {
         // Custom CSS
         wp_register_style( 'html5blank', get_template_directory_uri() . '/style.css', array( 'normalize', 'slick', 'slicktheme', 'fancybox', 'markaCss' ), '1.0' );
 
+        // Google Font Raleway
+        wp_register_style( 'google_fonts', 'https://fonts.googleapis.com/css?family=Raleway:300,400,600,700,800,900' );
+
         // Register CSS
         wp_enqueue_style( 'html5blank' );
     } else {
@@ -596,10 +599,14 @@ function html5_shortcode_demo_2( $atts, $content = null ) {
     return '<h2>' . $content . '</h2>';
 }
 
-
-
-
-
+//Gets post cat slug and looks for single-[cat slug].php and applies it
+add_filter('single_template', create_function(
+    '$the_template',
+    'foreach( (array) get_the_category() as $cat ) {
+        if ( file_exists(TEMPLATEPATH . "/single-{$cat->slug}.php") )
+        return TEMPLATEPATH . "/single-{$cat->slug}.php"; }
+    return $the_template;' )
+);
 
 
 /*------------------------------------*\
