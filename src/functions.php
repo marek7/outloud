@@ -165,10 +165,7 @@ function html5blank_styles() {
         wp_register_style( 'markaCss', get_template_directory_uri() . '/css/lib/marka.min.css', array(), '1.0.0' );
 
         // Custom CSS
-        wp_register_style( 'html5blank', get_template_directory_uri() . '/style.css', array( 'normalize', 'slick', 'slicktheme', 'fancybox', 'markaCss' ), '1.0' );
-
-        // Google Font Raleway
-        wp_register_style( 'google_fonts', 'https://fonts.googleapis.com/css?family=Raleway:300,400,600,700,800,900' );
+        wp_register_style( 'html5blank', get_template_directory_uri() . '/style.css', array( 'normalize', 'slick', 'slicktheme', 'fancybox', 'markaCss' ), '1.0' );        
 
         // Register CSS
         wp_enqueue_style( 'html5blank' );

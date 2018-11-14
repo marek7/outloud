@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_5be6095a41a7b",
-            "label": "Header",
-            "name": "header",
+            "label": "Navigation",
+            "name": "navigation",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -141,7 +141,7 @@
                     "min": 0,
                     "max": 0,
                     "layout": "table",
-                    "button_label": "Dodaj ikonu",
+                    "button_label": "Dodaj",
                     "sub_fields": [
                         {
                             "key": "field_5be99f5eed896",
@@ -203,97 +203,314 @@
         },
         {
             "key": "field_5be48d7267557",
-            "label": "CTA Block",
-            "name": "cta-block",
-            "type": "group",
+            "label": "Flexible Content",
+            "name": "flexible_content",
+            "type": "flexible_content",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "100",
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_5be5a822e4d18",
-                    "label": "Image",
-                    "name": "image",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "large",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
+            "layouts": {
+                "5beb216edc56b": {
+                    "key": "5beb216edc56b",
+                    "name": "hero",
+                    "label": "Hero",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5be5a822e4d18",
+                            "label": "Pozadina",
+                            "name": "bg_img",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "large",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5be5a837e4d19",
+                            "label": "Naslov",
+                            "name": "heading",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 2,
+                            "new_lines": "br"
+                        },
+                        {
+                            "key": "field_5be5a87de4d1a",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5be5a8b1e4d1b",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 },
-                {
-                    "key": "field_5be5a837e4d19",
-                    "label": "Heading",
-                    "name": "heading",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 2,
-                    "new_lines": "br"
-                },
-                {
-                    "key": "field_5be5a87de4d1a",
-                    "label": "Text",
-                    "name": "text",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0
-                },
-                {
-                    "key": "field_5be5a8b1e4d1b",
-                    "label": "Link",
-                    "name": "link",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "25",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "url"
+                "layout_5beb29e733997": {
+                    "key": "layout_5beb29e733997",
+                    "name": "products",
+                    "label": "Proizvodi",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5beb2ab933998",
+                            "label": "Sadržaj proizvoda",
+                            "name": "content",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5beb2ae433999",
+                                    "label": "Naslov",
+                                    "name": "title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5beb2b443399a",
+                                    "label": "Opis",
+                                    "name": "desc",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
+                                },
+                                {
+                                    "key": "field_5beb2bae3399b",
+                                    "label": "Slika",
+                                    "name": "image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_5beb2c203399d",
+                                    "label": "Cjenik",
+                                    "name": "price",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "collapsed": "",
+                                    "min": 0,
+                                    "max": 0,
+                                    "layout": "block",
+                                    "button_label": "Dodaj paket",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5beb2c423399e",
+                                            "label": "Naziv paketa",
+                                            "name": "price_title",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_5beb2d2b3399f",
+                                            "label": "Cijena",
+                                            "name": "price",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_5beb2d47339a0",
+                                            "label": "Redovna cijena",
+                                            "name": "full_price",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "field_5beb2d94339a1",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                },
+                                {
+                                    "key": "field_5beb2bf63399c",
+                                    "label": "Napomena",
+                                    "name": "disclaimar",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
-            ]
+            },
+            "button_label": "Dodaj blok",
+            "min": "",
+            "max": ""
         }
     ],
     "location": [
@@ -328,5 +545,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1542055526
+    "modified": 1542140562
 }

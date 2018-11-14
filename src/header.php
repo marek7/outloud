@@ -5,7 +5,8 @@
 		<title><?php wp_title( '' ); ?><?php if ( wp_title( '', false ) ) { echo ' : '; } ?><?php bloginfo( 'name' ); ?></title>
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
-		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo( 'name' ); ?>" href="<?php bloginfo( 'rss2_url' ); ?>" />
+        <link rel="alternate" type="application/rss+xml" title="<?php bloginfo( 'name' ); ?>" href="<?php bloginfo( 'rss2_url' ); ?>" />
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,9 +38,9 @@
             ?>    
 
             <?php                 
-                if (have_rows('header')):?>    
+                if (have_rows('navigation')):?>    
                 <div class="container">            
-                    <?php while( have_rows('header') ): the_row(); 
+                    <?php while( have_rows('navigation') ): the_row(); 
                     
                     //vars
                     $logo = get_sub_field('logo');         
@@ -59,7 +60,7 @@
                                 $number = get_sub_field('number');
                             ?>
                             <li>
-                                <span class="app-name"><?php echo $app . ':'; ?></span>
+                                <span class="app-name"><?php echo $app; ?></span>
                                 <div class="border">
                                     <img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>">
                                     <span class="app-num"><?php  echo $number; ?></span>
