@@ -9,7 +9,22 @@
 
 		// Slick example
 		$( document ).ready( function() {
-			$( '.your-class' ).slick();
+			$( '.slider-class' ).slick({
+                nextArrow: '.next',
+                prevArrow: '.prev',
+                dots: false,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                speed: 500,
+                responsive: [
+                    {
+                        breakpoint: 800,
+                        settings: {
+                            dots: true
+                        }
+                    }
+                ]
+            });
 		});
 	});
 } ( this, jQuery ) );

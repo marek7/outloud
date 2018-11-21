@@ -42,9 +42,7 @@ a {
   &:focus,
   &:hover {
     text-decoration: none;
-  }
-
-  &:active {}
+  } 
 }
 
 input[type="text"],
@@ -84,4 +82,12 @@ h1, h2, h3, h4, h5, h6{
   100% {
     transform: rotate(360deg);
   }
+}
+
+#menu_icon{
+    display: none;
+}
+
+.some-class{
+    display: none;
 }

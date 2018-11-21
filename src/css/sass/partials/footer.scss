@@ -3,6 +3,247 @@
  * ---
  */
 
+footer {
+    background-color: black;    
+    width: 100%;
+    height: auto;    
+    padding: 35px 0;
+    .footer-container{
+        max-width: 1230px;
+        width: 100%;
+        padding: 35px 15px;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .col-50{
+            flex-basis: 49%;
+            color: white;
+            h3{
+                font-size: 2.8rem;
+                font-weight: 700;
+                margin: 0;
+                padding: 0;
+            }
+            p{
+                width: 70%;
+                margin: 30px 0 0 0;
+                padding: 0;
+                font-size: 1.4rem;
+                text-align: justify;
+                line-height: 1.6;
+            }
+            .footer-contact{
+                margin-top:10%;
+                ul{
+                    list-style-type: none;
+                    display: flex;
+                    padding: 0;
+                    li{
+                        display: flex;
+                        width: auto;
+                        padding: 0;
+                        margin-right: 5%;
+                        .app-name{
+                            align-self: center;                            
+                            font-weight: 700;                   
+                        }
+                        .border{
+                            border: 1px solid white;
+                            border-radius: 30px;
+                            width: 200px;
+                            padding: 10px 0 10px 25px;
+                            margin-left: 4%;
+                            display: flex;
+                            align-content: center;
+                            justify-content: flex-start;
+                            .app-num {
+                                padding-left: 10%;
+                                align-self: center;
+                            }
+                        }
+                    }
+                }
+            }
+            .contact-data{
+                margin-top: 5%;
+                .email-container{  
+                    margin-top: 2%;                  
+                    display: flex;
+                    align-items: center;
+                    font-size:1.2rem;
+                    font-weight: 700;
+                    text-decoration: underline;  
+                    a{
+                        color: white;
+                    }                  
+                    .contact-img{
+                        display: flex;
+                        justify-content: center;
+                        width: 25px;
+                        margin-right: 1%;      
+                    }
+                }
+                .work-hour p{                    
+                    font-size:1.2rem !important;
+                    font-weight: 700;
+                    line-height: 2;
+                }
+            }
+        }
+        .footer-social{
+            margin-top: 5%;
+            h3{
+                font-size: 1.4rem;
+                font-weight: 700;
+                margin-bottom: 2%;
+            }
+            .social {
+                list-style-type: none;
+                display: flex;
+                margin: 0;
+                padding: 0; 
+                li {
+                    margin-right: 10px;
+                }          
+            }
 
-.footer {
+        }
+        .gform_wrapper{
+            margin: 0 auto;
+            color: white;
+            max-width: 380px !important;
+            width: 100% !important; 
+            .gform_heading{
+                display: none;
+            }
+        }     
     }
+    .copyright{
+        padding-top: 20px;
+        text-align: center;
+        color: white;
+    }
+}
+body .gform_wrapper ul li.gfield{
+    margin-top: 0 !important;
+}
+.gfield_label{
+    display: none !important;
+}
+label{
+    display:none !important;
+}
+input,
+.textarea{
+    width: 100% !important;
+    height: 50px;
+    background-color: transparent !important;
+    border-radius: 10px;   
+    font-size: 1.6rem !important;
+    padding-left: 20px !important;
+    padding-right: 0 !important;
+    margin: 10px 0 !important;
+    &::placeholder {
+        color: white !important;
+        font-family: $font-family-base !important;
+    }
+}
+.textarea{
+    padding-top: 20px !important;
+    height: 100px !important;
+    color: white !important;
+}
+input[type=text]{
+    color: white !important;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload {
+    border: 1px solid white !important;
+    border-radius: 10px; 
+    width: 100% !important;
+    height: 50px;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload{
+    color: white;
+}
+
+/*#extensions_message_1_5{
+    display:flex;   
+    align-items: center;
+    height: inherit;
+    &:after{
+        content: '+ Upload File';        
+        text-align: center;       
+        width: 100%;
+        height: auto;
+    }
+}*/
+.gform_footer {
+    display: flex;
+    padding-left: 0 !important;    
+    input[type=submit] {
+        justify-self: center;
+        color: white;
+        width: 75% !important;
+        margin: 0 auto !important;
+        border-radius: 60px !important;
+        border:none;
+        background-image: linear-gradient(to left,rgba(147, 32, 107, 1 ),rgba(237, 30 , 121, 1));
+    }
+    #gform_submit_button_1{
+        padding-left: 0 !important;
+    }
+}
+
+@media only screen and(max-width:1024px){
+    .footer-container{
+        flex-direction: column-reverse;               
+        .col-50{
+            width: 100%;
+            .footer-contact{
+                margin-top: 5% !important;
+            }
+            .contact-title{
+                display: none;
+            }
+            .contact-info {
+                display: block;
+                width: 100%;
+            }
+            .gform_wrapper{
+                max-width: 100% !important;
+                .gform_heading{
+                    display: block !important;
+                }
+                li{
+                    padding-right: 0 !important;
+                }
+                input[type=submit] {
+                    width: 40% !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:600px) {
+    .footer-contact{
+        margin-top: 5% !important;
+        .number-container li .app-name{
+            display: none;
+        }
+    }
+    .email-container {
+        margin-top: 20px !important;
+    }
+}
+
+@media only screen and(max-width:480px) {
+    .footer-contact{        
+        .number-container li .border{
+            border:none !important;
+            width: 150px !important;
+        }
+    }
+}

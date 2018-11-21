@@ -49,32 +49,61 @@ if (have_rows('flexible_content')):
                 $note = get_sub_field('disclaimar'); 
             
             ?>
+                <div class="product-box">
+                    <div class="col-content-box">
 
-                <p><?php echo $title; ?></p>
-                <?php echo $desc; ?>
-                <img src="<?php echo $img['url']; ?>" alt="">
+                        <h1><?php echo $title; ?></h1>
+                        <?php echo $desc; ?>                      
 
-                <?php if(have_rows('price')): ?>
+                        <?php if(have_rows('price')): ?>
 
-                    <div>
+                        <div class="price-box">
 
-                    <?php while(have_rows('price')): the_row(); 
-                    
-                        $price_title = get_sub_field('price_title');
-                        $price = get_sub_field('price');
-                        $full_price = get_sub_field('full_price');
-                    
-                    ?>
+                            <div class="price-box-inner">
 
-                    <p><?php echo $price_title; ?></p>
-                    <p><?php echo $price; ?></p>
-                    <p><?php echo $full_price; ?></p>
+                            <?php while(have_rows('price')): the_row(); 
+                            
+                                $price_title = get_sub_field('price_title');
+                                $price = get_sub_field('price');
+                                $full_price = get_sub_field('full_price');
+                            
+                            ?>
+                                <div class="price-container">
+                                    <?php if($price_title):
+                                        echo '<p class="price-title">' .  $price_title . '</p>';
+                                    endif; ?>
 
-                    <?php endwhile; ?>
+                                    <?php if($price):
+                                        echo '<p class="price">' .  $price . '</p>';
+                                    endif; ?>
+
+                                    <?php if($full_price):
+                                        echo '<p class="full-price">' .  $full_price . '</p>';
+                                    endif; ?>                                    
+                                </div>
+
+                            <?php endwhile; ?> 
+                            
+                            </div>
+
+                            <?php 
+                            if($note):
+                                echo '<p class="note">' .  $note . '</p>';
+                            endif; ?>
+                            <div class="link">
+                                <a href="<?php echo $link['url']; ?>"><?php echo $link['title']; ?></a>
+                            </div>
+                        </div>
 
                     </div>
 
-                <?php endif; ?>
+                    <div class="col-img-box">
+                        <img src="<?php echo $img['url']; ?>" alt="">
+                    </div>
+
+                    <?php endif; ?>
+
+                </div>
 
             <?php endwhile; ?>
 
@@ -84,12 +113,61 @@ if (have_rows('flexible_content')):
 
     </div>
     
+    <?php elseif (get_row_layout() == 'testimonials'): ?>
+
+        <section class="testimonials">
+
+            <h1>Testimonials</h1>
+            
+            <?php if(have_rows('repeater')): ?>
+
+                <div class="testimonials-container">                
+
+                    <div class="prev">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/icon_arrow_left.png" alt="Left">
+                    </div>                    
+
+                    <div class="slider-class">                    
+
+                        <?php while(have_rows('repeater')): the_row();
+
+                        $testimonial = get_sub_field('testimonial');
+                        $name = get_sub_field('name');
+
+                        ?>
+
+                        <div class="content">
+
+                            <?php if($testimonial):
+                                echo '<div class="text-justify">' . $testimonial . '</div>';
+                            endif;
+                            ?>
+                            <?php if($name):
+                                echo '<div class="text-center">' . $name . '</div>';
+                            endif;
+                            ?>
+
+                        </div>                   
+
+                        <?php endwhile; ?>
+
+                    </div>
+
+                    <div class="next">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/icon_arrow_right.png" alt="Left">
+                    </div>
+
+                </div>
+
+            <?php endif; ?> 
+           
+        </section>
+
+    
     <?php endif; ?>
 
     <?php endwhile; ?>
 
 <?php endif; ?>
-
-<div class="wrapper">
 
 <?php get_footer(); ?>

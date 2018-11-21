@@ -62,8 +62,10 @@
                             <li>
                                 <span class="app-name"><?php echo $app; ?></span>
                                 <div class="border">
+                                    <div class="inner-border">
                                     <img src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>">
                                     <span class="app-num"><?php  echo $number; ?></span>
+                                    </div>
                                 </div>
                             <?php endwhile; ?>   
                         </ul>
@@ -101,20 +103,22 @@
             
         <!-- wrapper -->
         <div class="wrapper">
-<?php 
-/*
+
 <!-- Marka icon example. Only awailable Bars and Times for hamburger menu -->
 
 <i id="menu_icon"></i>
 
 <!--  Example for fancybox and slick slider -->
-<div class="your-class">
+<div class="some-class">
 	<div>your content</div>
 	<div>your content</div>
 	<div>your content</div>
 </div>
 
+<?php /*
 <a data-fancybox="gallery" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo.svg"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo.svg"></a>
 <a data-fancybox="gallery" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo.svg"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/logo.svg"></a>
 */
+
+
 ?>
